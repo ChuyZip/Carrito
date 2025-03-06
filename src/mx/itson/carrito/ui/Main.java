@@ -6,6 +6,7 @@ package mx.itson.carrito.ui;
 
 import java.util.Scanner;
 import mx.itson.carrito.entidades.Carro;
+import mx.itson.carrito.enums.TipoMotor;
 
 /**
  *
@@ -32,6 +33,7 @@ public class Main {
         bmw.setColor("Silver");
         bmw.setYear(2025);
         bmw.setKilometers(10000);
+        bmw.setTipoMotor(TipoMotor.HÍBRIDO);
        
                
        double time = bmw.arriveTime(distance, speed);
