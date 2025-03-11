@@ -6,6 +6,8 @@ package mx.itson.carrito.ui;
 
 import java.util.Scanner;
 import mx.itson.carrito.entidades.Carro;
+import mx.itson.carrito.entidades.Propietario;
+import mx.itson.carrito.entidades.Taller;
 import mx.itson.carrito.enums.TipoMotor;
 import mx.itson.carrito.enums.TipoTransmision;
 
@@ -36,13 +38,32 @@ public class Main {
         bmw.setKilometers(10000);
         bmw.setTipoMotor(TipoMotor.HÍBRIDO);
         bmw.setTipoTransmision(TipoTransmision.ESTANDARD);
-               
+        
+
+        Propietario p = new Propietario();
+        
+        p.setNombre("Chuy");
+        p.setDomicilio("Marte, AV Olimpo");
+        p.setMail("chuydemarte@olimpo.com");
+        p.setTelefono("123456789");
+        
+        bmw.setPropietario(p);
+        
+        Taller t = new Taller();
+        
+        t.setUbicacion("Ciudad Del Sol");
+        t.setNombre(" SR Arreglatodo");
+        t.setTelefono("2233445566");
+        
+        bmw.setTaller(t);
+        
        double time = bmw.arriveTime(distance, speed);
        
         System.out.println("El tiempo que le tomará al carro " + bmw.getBrand() 
                 + " de color " + bmw.getColor() 
                 + " de clase " + bmw.getCategory() 
                 +  " será " + time + " horas " 
-                + " y ahora su kilometraje es de " + bmw.getKilometers() );
+                + " y ahora su kilometraje es de " + bmw.getKilometers() + " el propietario de este carro es " + bmw.getPropietario() .getNombre() 
+                + " en caso de refacción llamar a " + bmw.getTaller() .getTelefono() + bmw.getTaller() .getNombre() + " estamos ubicados en " + bmw.getTaller() .getUbicacion() );
     }
 }

@@ -15,6 +15,34 @@ import mx.itson.carrito.enums.TipoTransmision;
 public class Carro {
 
     /**
+     * @return the taller
+     */
+    public Taller getTaller() {
+        return taller;
+    }
+
+    /**
+     * @param taller the taller to set
+     */
+    public void setTaller(Taller taller) {
+        this.taller = taller;
+    }
+
+    /**
+     * @return the propietario
+     */
+    public Propietario getPropietario() {
+        return propietario;
+    }
+
+    /**
+     * @param propietario the propietario to set
+     */
+    public void setPropietario(Propietario propietario) {
+        this.propietario = propietario;
+    }
+
+    /**
      * @return the tipoTransmision
      */
     public TipoTransmision getTipoTransmision() {
@@ -126,6 +154,10 @@ public class Carro {
     private TipoMotor tipoMotor;  
     
     private TipoTransmision tipoTransmision;
+    
+    private Propietario propietario;
+    
+    private Taller taller;
     /**
      * Calcula el tiempo que tarda el carro en recorrer una distancia.
      * @param distance Distancia que recorrerá el carro.
